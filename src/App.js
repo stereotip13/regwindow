@@ -34,7 +34,7 @@ const App = () => {
     var regularExpression =
       /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,8}$/
     if (!regularExpression.test(e.target.value)) {
-      setPasswordError('используйте в пароле спец символ % & # и др')
+      setPasswordError('используйте в пароле цифры и спец символ % & # и др')
       if (e.target.value.length < 3 || e.target.value.length > 8) {
         setPasswordError('Пароль должен быть длиннее 3 и меньше 8 символов')
         if (!e.target.value) {
@@ -59,7 +59,7 @@ const App = () => {
   return (
     <div className="App">
       <form className="Form">
-        <h1 className="Reg">Регистрация </h1>
+        <h1 className="Reg">войти в систему</h1>
         {emailDirty && emailError && (
           <div style={{ color: 'red' }}>{emailError}</div>
         )}
